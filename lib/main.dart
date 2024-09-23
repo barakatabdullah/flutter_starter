@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/infrastructure/navigation/navigation.dart';
 import 'package:flutter_starter/infrastructure/navigation/routes.dart';
+import 'package:flutter_starter/locales/strings_manager.dart';
 import 'package:get/get.dart';
 
 Future<void> main() async {
@@ -17,6 +18,9 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      locale: Locale('ar'),
+      translations: Messages(),
+      debugShowCheckedModeBanner: false,
       initialRoute: initialRoute,
       getPages: Nav.routes,
 
